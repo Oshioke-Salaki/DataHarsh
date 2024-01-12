@@ -58,7 +58,7 @@ function AppLayout() {
           <h1 className="mb-[30px] mt-[200px] text-center text-[24px]">
             Hey, Connect your wallet to continue!👇🏻
           </h1>
-          <PrimaryButton text={"Connect wallet"} />
+          <PrimaryButton text={"Connect wallet"} handleClick={connectWallet} />
         </div>
       )}
       {connection && <Outlet context={[provider, address]} />}
