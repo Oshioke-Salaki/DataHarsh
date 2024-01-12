@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { connect, disconnect } from "starknetkit";
 import WalletConnector from "./WalletConnector";
+import PrimaryButton from "./PrimaryButton";
 
 function AppLayout() {
   const [connection, setConnection] = useState("");
@@ -53,9 +54,12 @@ function AppLayout() {
         />
       </Navbar>
       {!connection && (
-        <h1 className="mt-[200px] text-center text-[24px]">
-          Hey, Connect your wallet to continue!👆🏼
-        </h1>
+        <div>
+          <h1 className="mb-[30px] mt-[200px] text-center text-[24px]">
+            Hey, Connect your wallet to continue!👇🏻
+          </h1>
+          <PrimaryButton text={"Connect wallet"} />
+        </div>
       )}
       {connection && <Outlet context={[provider, address]} />}
     </div>
