@@ -9,7 +9,7 @@ function FormInput({ value, onChange, id }) {
       onChange={(e) => {
         onChange(e);
       }}
-      className="bg-white p-2 outline-none rounded-sm text-[#333] w-full normal-case"
+      className="bg-white p-2 outline-none rounded-sm text-[#333] w-full !normal-case"
     />
   );
 }
